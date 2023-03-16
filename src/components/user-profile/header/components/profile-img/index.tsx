@@ -4,22 +4,26 @@ export default function UserProfileProfileImage(): JSX.Element {
 
     return (
         <>
-            <div className="d-flex
-                            flex-grow-1
-                            flex-basis-0
-                            justify-content-center
-                            flex-column
-                            flex-shrink-0
-                            position-relative">
-                <div className="mx-auto">
-                    <div className="profile-img">
-                        <button className="button-fill">
-                            <Image src="/test.png" 
-                                width={150}
-                                height={150}
-                                alt="change profile picture" />
-                        </button>
-                    </div>
+            <div className="mx-md-auto
+                            me-4
+                            profile-logo
+                            d-flex
+                                flex-grow-md-1
+                                flex-basis-md-0
+                                justify-content-center
+                                flex-column
+                                flex-shrink-0
+                                position-relative">
+                <div className="profile-img
+                                w-100
+                                h-100">
+                    <button className="button-fill
+                                       w-100
+                                       h-100">
+                        <Image src="/test.png" 
+                            fill={true}
+                            alt="change profile picture" />
+                    </button>
                 </div>
             </div>
         </>

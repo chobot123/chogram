@@ -15,8 +15,15 @@ export default function UserProfileUserSettings(): JSX.Element {
                                 header-b-gap
                                 mw-0">
                 <UserProfileUsername />
-                <UserEditProfile />
+                <div className="d-none
+                                d-md-block">
+                    <UserEditProfile />
+                </div>
                 <UserProfileSettings />        
+            </div>
+            <div className="d-block
+                            d-md-none">
+                <UserEditProfile />
             </div>
         </>
     )

@@ -19,8 +19,8 @@ export default function UserProfile(): JSX.Element {
                 <div className="container
                                 mx-auto
                                 px-0
-                                pt-4
-                                px-sm-2
+                                pt-0
+                                pt-md-4
                                 px-md-3"
                     style={
                         {

@@ -3,6 +3,7 @@
     --nav-large-width: 244px;
     --nav-mobile-height: 50px;
     --def-font-size: 18px;
+    --color-muted: #dee2e6;
     --def-img-size: 24px;
     --cgram-secondary-bg: white;
 }
@@ -120,7 +121,55 @@ button {
     width: var(--nav-small-width);
 }
 
+h2 {
+    margin-bottom: 0px !important;
+}
+
+.settings-icon {
+    font-size: 24px;
+}
+
+.user-profile-header {
+    margin-bottom: 44px;
+}
+
+.profile-logo {
+    width: 150px;
+    height: 150px;
+}
+
 @media (max-width: 767px) {
+
+    .profile-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .user-profile-header {
+        margin-bottom: 0;
+    }
+
+    .header-b-gap {
+        margin-bottom: 12px;
+    }
+
+    .edit-profile {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .border-mb-top-muted {
+        border-top: 1px solid var(--color-muted);
+    }
+
+    .w-mb-33 {
+        width: 33.33%;
+    }
+
+    .user-nav-tab {
+        margin-right: 0px !important;
+    }
+
     .sidenav-bar {
         width: 100%;
         flex-direction: column;
@@ -132,7 +181,7 @@ button {
         align-items: stretch;
         bottom: 0;
         justify-content: flex-start;
-        border-top: 1px solid #dee2e6;
+        border-top: 1px solid var(--color-muted);
     }
     
     .mednav-bar {
@@ -154,6 +203,25 @@ button {
 
     .nav-offset-w {
         margin-left: 0;
+    }
+}
+
+.mb-nav-top {
+    height: calc(var(--nav-mobile-height) - 6px);
+}
+
+.user-posts-gap {
+    margin-right: 3px;
+}
+
+@media (min-width: 768px) {
+
+    .user-posts-gap {
+        margin-right: 28px;
+    }
+
+    .mr-md-40 {
+        margin-right: 40px;
     }
 }
 

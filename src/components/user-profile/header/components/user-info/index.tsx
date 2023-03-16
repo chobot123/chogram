@@ -10,17 +10,9 @@ export default function UserProfileInfo(): JSX.Element {
 
     return (
         <>
-            <section className="d-flex
-                                flex-column
-                                flex-grow-2
-                                flex-shrink-1
-                                align-items-stretch
-                                pl-0
-                                mw-0">
-                <UserProfileUserSettings />
-                <UserProfileStatus />
-                <UserProfileName />                  
-            </section>
+            <UserProfileUserSettings />
+            <UserProfileStatus />
+            <UserProfileName />
         </>
     )
 }

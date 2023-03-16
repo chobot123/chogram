@@ -15,12 +15,8 @@ export default function UserProfileCPostsGrid(): JSX.Element {
                             <div className="col
                                             d-block
                                             position-relative
+                                            user-posts-gap
                                             p-0"
-                                style={
-                                    {
-                                        marginRight: "28px"
-                                    }
-                                }
                             >
                                 <a>
                                     <div className="d-block
@@ -38,13 +34,11 @@ export default function UserProfileCPostsGrid(): JSX.Element {
                                     </div>
                                 </a>
                             </div>
-                            <div className="col 
+                            <div className="col
+                                            d-block
+                                            position-relative
+                                            user-posts-gap
                                             p-0"
-                                style={
-                                    {
-                                        marginRight: "28px"
-                                    }
-                                }
                             >
                             </div>
                             <div className="col 

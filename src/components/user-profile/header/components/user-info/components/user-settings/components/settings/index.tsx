@@ -8,7 +8,8 @@ export default function UserProfileSettings(): JSX.Element {
                             ms-1
                             flex-shrink-0">
                 <button className="icon-btn">
-                    <div className="icon-wrapper">
+                    <div className="icon-wrapper
+                                    settings-icon">
                         <AiOutlineSetting />
                     </div>
                 </button>

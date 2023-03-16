@@ -40,6 +40,13 @@ export default function UserProfileNavigationTab({name, logo, index, activeTabIn
                           align-items-center
                           d-flex
                           flex-row
+                          flex-md-grow-0
+                          flex-shrink-1
+                          flex-basis-auto
+                          flex-grow-1
+                          flex-grow-md-0
+                          flex-shrink-md-0
+                          flex-basis-md-auto
                           justify-content-center"
                 aria-selected={(index === activeTabIndex) ? true : false}
                 role="tab"

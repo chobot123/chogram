@@ -7,17 +7,38 @@ export default function UserProfileStatus(): JSX.Element {
     return (
         <>
             <ul className="d-flex
-                           header-b-gap">
+                           justify-content-evenly
+                           justify-content-md-start
+                           mb-0
+                           py-2
+                           border-mb-top-muted
+                           py-md-0
+                           mb-md-4">
                 <li className="posts
-                               mr-40">
+                               d-flex
+                               justify-content-center
+                               align-items-center
+                               d-md-block
+                               w-mb-33
+                               mr-md-40">
                     <UserProfilePostsStatus />
                 </li>
                 <li className="followers
-                               mr-40">
+                               d-flex
+                               justify-content-center
+                               align-items-center
+                               d-md-block
+                               w-mb-33
+                               mr-md-40">
                     <UserProfileFollowers />
                 </li>
                 <li className="following
-                               mr-40">
+                               d-flex
+                               justify-content-center
+                               align-items-center
+                               d-md-block
+                               w-mb-33
+                               mr-md-40">
                     <UserProfileFollowing />
                 </li>
             </ul>
