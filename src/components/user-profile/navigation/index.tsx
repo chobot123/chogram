@@ -1,6 +1,7 @@
 import { AiOutlineTable, AiOutlineFlag, AiOutlineTags} from "react-icons/ai";
 import UserProfileNavigationTab from "./components/navigation-tab";
 import { useState } from "react";
+import UserProfileCPostsGrid from "../posts";
 
 type navigationTab = {
     name: string, 
@@ -58,7 +59,7 @@ export default function UserProfileNavigation(): JSX.Element {
                             flex-column
                             align-items-stretch
                             position-relative">
-
+                <UserProfileCPostsGrid />                
             </div>
         </>
     )

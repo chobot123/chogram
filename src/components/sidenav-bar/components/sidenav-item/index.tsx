@@ -26,8 +26,9 @@ export default function SideNavItem({name, icon}: props): JSX.Element {
                                 align-items-center">
                     {icon}
                 </div>
-                <div className="sidenav-name 
-                                d-none d-md-block
+                <div className="sidenav-name
+                                d-none 
+                                d-xl-block
                                 ps-2">
                     {name}
                 </div>

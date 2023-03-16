@@ -46,19 +46,22 @@ export default function SideNavBar(): JSX.Element {
         <>
             <div className="sidenav-bar 
                             position-fixed 
-                            border-end
-                            vh-100">
-                <div className="med-nav 
+                            border-end"
+            >
+                <div className="med-nav
+                            mednav-bar 
                             nav-full-h 
                             d-flex
                             flex-column
-                            pt-2 
+                            pt-0
+                            pt-md-2 
                             pad-x-12
-                            pb-4">
+                            pb-md-4">
                     
                     <SideNavLogo />
 
                     <ul className="list-unstyled
+                                    sidenav-items
                                     flex-grow-1
                                     w-100">
                         {

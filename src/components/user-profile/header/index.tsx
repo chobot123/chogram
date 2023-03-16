@@ -5,11 +5,17 @@ export default function UserProfileHeader(): JSX.Element {
 
     return (
         <>
-             <header className="user-profile-header
+            <header className="user-profile-header
                                 d-flex
                                 flex-row
                                 align-items-stretch
-                                flex-shrink-0">
+                                flex-shrink-0"
+                style={
+                    {
+                        marginBottom: "44px"
+                    }
+                }
+            >
                 <UserProfileProfileImage />
                 <UserProfileInfo />                
              </header>

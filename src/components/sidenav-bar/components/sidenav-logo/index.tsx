@@ -3,10 +3,11 @@ export default function SideNavLogo(): JSX.Element {
     return (
         <>
             <div className="sidenav-logo
-                            px-2
-                            pt-4
+                            d-md-none
+                            px-md-2
+                            pt-md-4
                             img-def
-                            pb-3
+                            pb-md-3
                             hide-x">
                 <div className="opacity-1">
                     <div className="logo">
