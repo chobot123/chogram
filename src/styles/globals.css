@@ -5,6 +5,8 @@
     --def-font-size: 18px;
     --color-muted: #dee2e6;
     --def-img-size: 24px;
+    --home-max-width: 630px;
+    --app-primary-bg: white;
     --cgram-secondary-bg: white;
 }
 
@@ -136,6 +138,143 @@ h2 {
 .profile-logo {
     width: 150px;
     height: 150px;
+}
+
+.main {
+    background-color: rgb(var(--app-primary-bg));
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    order: 4;
+}
+
+.card-content {
+    align-items: stretch;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    vertical-align: baseline;
+}
+
+.img-wrapper {
+    align-items: stretch;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: baseline;
+    width: 100%;
+}
+
+.image-container {
+    overflow-y: visible;
+    align-content: stretch;
+    flex-direction: column;
+    right: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    align-items: stretch;
+    align-self: auto;
+    justify-content: flex-start;
+    bottom: 0;
+    flex-grow: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.slide-wrapper {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.card-ul {
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.card-li {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    vertical-align: baseline;
+}
+
+.card-wrapper {
+    width: 468px;
+    overflow-y: visible;
+    align-content: stretch;
+    background-color: transparent;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    align-items: stretch;
+    overflow-x: visible;
+    align-self: auto;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.slide-pos-container {
+    align-items: stretch;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.card-btn {
+    flex-shrink: 0;
+    align-items: stretch;
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+    vertical-align: baseline;
+    touch-action: manipulation;
+    padding-left: 0;
+    flex-direction: column;
+    display: flex;
 }
 
 @media (max-width: 767px) {
