@@ -277,6 +277,24 @@ h2 {
     display: flex;
 }
 
+.CardList {
+    align-items: stretch;
+    border: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    vertical-align: baseline;
+    width: 100%;
+    max-width: 630px;
+}
+
 @media (max-width: 767px) {
 
     .profile-logo {
@@ -353,6 +371,10 @@ h2 {
     margin-right: 3px;
 }
 
+.home-mw-1120 {
+    max-width: 1013px;
+}
+
 @media (min-width: 768px) {
 
     .user-posts-gap {
@@ -361,6 +383,16 @@ h2 {
 
     .mr-md-40 {
         margin-right: 40px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .hide-mw-1120 {
+        display: none;
+    }
+
+    .home-mw-1120 {
+        max-width: 630px;
     }
 }
 
