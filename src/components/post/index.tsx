@@ -1,7 +1,10 @@
 import Image from "next/image";
-import { AiOutlineArrowRight, AiOutlineComment, AiOutlineEllipsis, AiOutlineFlag, AiOutlineHeart, AiOutlineSend } from "react-icons/ai";
+import { FormEvent, useCallback, useRef } from "react";
+import { AiOutlineArrowRight, AiOutlineComment, AiOutlineEllipsis, AiOutlineFlag, AiOutlineHeart, AiOutlineSend, AiOutlineSmile } from "react-icons/ai";
 
 export default function SinglePost(): JSX.Element {
+
+    const growerWrapperRef = useRef<HTMLDivElement | null>(null);
 
     return (
         <>
@@ -23,11 +26,16 @@ export default function SinglePost(): JSX.Element {
                                         flex-grow-1"
                             style={
                                 {
-                                    minHeight: '450px'
+                                    minHeight: '450px',
+                                    borderLeft: '1px solid lightgray',
+                                    borderTop: '1px solid lightgray',
+                                    borderBottom: '1px solid lightgray'
                                 }
                             }
                         >
-                            <div className="d-block w-100">
+                            <div className="d-block 
+                                            w-100"
+                            >
                                 <div className="d-flex
                                                 m-0
                                                 p-0
@@ -43,12 +51,20 @@ export default function SinglePost(): JSX.Element {
                                                     <div className="img-singlepost-wrapper" 
                                                         style={
                                                             {
-                                                                paddingBottom: '70%',
+                                                                paddingBottom: '100%',
                                                             }
                                                         }
                                                     />
-                                                    <div className="img-container">
-                                                    </div>                    
+                                                    <Image 
+                                                        src="/dad.png"
+                                                        alt="post image"
+                                                        fill
+                                                        style={
+                                                            {
+                                                                objectFit: 'contain'
+                                                            }
+                                                        }
+                                                    />                 
                                                 </div>
                                             </div>
                                         </div>
@@ -62,12 +78,19 @@ export default function SinglePost(): JSX.Element {
                                         position-relative"
                             style={
                                 {
-                                    width: '335px'
+                                    width: '335px',
+                                    border: '1px solid lightgray'
                                 }
                             }
                         >
-                            <div className="user d-flex"
-                                style={{padding: '14px 4px 14px 16px'}}
+                            <div className="user 
+                                            d-flex"
+                                style={
+                                    {
+                                        padding: '14px 4px 14px 16px',
+                                        borderBottom: '1px solid lightgray'
+                                    }
+                                }
                             >
                                 <header className="user-info 
                                                    d-flex
@@ -96,7 +119,9 @@ export default function SinglePost(): JSX.Element {
                                         <div className="d-flex
                                                         flex-row
                                                         align-items-center
-                                                        justify-content-start">
+                                                        justify-content-start"
+                                            style={{fontSize: 14, fontWeight: '500'}}
+                                        >
                                             <div className="username">
                                                 <span>chojoshua99</span>
                                             </div>
@@ -109,7 +134,9 @@ export default function SinglePost(): JSX.Element {
                                                 <span>Following</span>
                                             </div>
                                         </div>
-                                        <div className="location">
+                                        <div className="location"
+                                            style={{fontSize: 12, color: 'dimgray'}}
+                                        >
                                             <span>Home Sweet Home</span>
                                         </div>
                                     </div>
@@ -118,7 +145,10 @@ export default function SinglePost(): JSX.Element {
                                                 d-flex
                                                 justify-content-center
                                                 align-items-center">
-                                    <div className="img-container">
+                                    <div className="img-container
+                                                    d-inline-flex"
+                                        style={{padding: 8}}                
+                                    >
                                         <AiOutlineEllipsis style={{fontSize: '24px'}}/>
                                     </div>
                                 </div>
@@ -128,6 +158,7 @@ export default function SinglePost(): JSX.Element {
                                             overflow-x-auto
                                             h-100
                                             overflow-y-auto"
+                                style={{borderBottom: '1px solid lightgray'}}
                             >
                                 <div className="post-description-comments-wrapper
                                                 w-100
@@ -184,40 +215,73 @@ export default function SinglePost(): JSX.Element {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="preview-users">
+                                        <div className="preview-users"
+                                            style={{fontSize: 14}}
+                                        >
                                             <span>
                                                 Liked By 
-                                                    <a> redrobsterr </a> 
+                                                    <a style={{fontWeight: 'bold'}}> redrobsterr </a> 
                                                 and
-                                                    <a> others </a>
+                                                    <a style={{fontWeight: 'bold'}}> others </a>
                                             </span>
                                         </div>
                                     </div>
                                 </section>
-                                <div className="date-posted">
+                                <div className="date-posted"
+                                    style={{fontSize: 10, color: 'gray', fontWeight: '500'}}
+                                >
                                     <div className="date-posted-wrapper">
                                         <span>2 Days Ago</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="add-comment"
-                                style={{padding: '6px 16px 6px 0px'}}
+                                style={{padding: '6px 16px 6px 0px', fontSize: 14}}
                             >
                                 <div>
                                     <form>
-                                        <div>
-                                            <div className="emoji">
-
-                                            </div>
-                                            <textarea id="current-user-comment" 
-                                                      name="current-user-comment" 
-                                                      rows={1}
-                                                      placeholder="Add a comment..."
+                                        <div className="d-flex
+                                                        align-items-center"
+                                        >
+                                            <div className="emoji"
+                                                style={{padding: 8}}
                                             >
+                                                <AiOutlineSmile style={{width: 24, height: 24}}/>
+                                            </div>
+                                            <div className="grow-wrap
+                                                            d-grid
+                                                            w-100
+                                                            overflow-y-scroll"
+                                                style={{
+                                                    maxHeight: 80
+                                                }}
+                                                ref={growerWrapperRef}
+                                            >
+                                                <textarea id="current-user-comment"
+                                                        className="flex-grow-1" 
+                                                        rows={1}
+                                                        name="current-user-comment"
+                                                        placeholder="Add a comment..."
+                                                        onInput={(e : FormEvent<HTMLTextAreaElement>) => {
+                                                            if(!growerWrapperRef || !growerWrapperRef.current) return;
 
-                                            </textarea>
-                                            <div className="send-comment">
-
+                                                            growerWrapperRef.current.dataset.replicatedValue = e.currentTarget.value
+                                                        }}
+                                                        style={
+                                                            {
+                                                                maxHeight: 80,
+                                                                resize: 'none',
+                                                                height: 'auto'
+                                                            }
+                                                        }
+                                                >
+                                                </textarea>
+                                            </div>
+                                            <div className="send-comment
+                                                            d-flex
+                                                            justify-content-center
+                                                            align-items-center">
+                                                <span>Post</span>
                                             </div>
                                         </div>
                                     </form>
