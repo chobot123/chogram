@@ -12,7 +12,6 @@ export default function FeedCard(): JSX.Element {
                         marginBottom: '12px',
                         paddingBottom: '20px',
                         maxHeight: 'inherit',
-                        padding: 0,
                         maxWidth: '470px',
                         borderBottom: '1px solid lightgray'
                     }

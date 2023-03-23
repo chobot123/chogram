@@ -52,7 +52,13 @@ export default function SideNavBar(): JSX.Element {
                             position-relative
                             mb-nav-top
                             border-bottom
-                            border-muted">
+                            border-muted"
+                style={
+                    {
+                        zIndex: 40
+                    }
+                }
+            >
                 <nav className="d-flex
                                 align-items-stretch
                                 position-relative
@@ -139,6 +145,11 @@ export default function SideNavBar(): JSX.Element {
             <div className="sidenav-bar 
                             position-fixed 
                             border-end"
+                style={
+                    {
+                        zIndex: 40
+                    }
+                }
             >
                 <div className="med-nav
                             mednav-bar 

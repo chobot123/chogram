@@ -16,6 +16,7 @@ export default function CardList(): JSX.Element {
                         style={
                             {
                                 maxWidth: '630px',
+                                marginTop: '12px',
                                 marginRight: 'auto'
                             }
                         }
