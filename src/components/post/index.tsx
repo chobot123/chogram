@@ -19,7 +19,33 @@ export default function SinglePost(): JSX.Element {
                     <div className="singlepost-border-wrapper
                                     d-flex
                                     w-100
-                                    flex-row">
+                                    toggle-row-col-768">
+                        {/* <div className="header-wrapper d-flex justify-content-between">
+                            <header className="user d-flex align-items-center">
+                                <div className="profile-picture d-flex"
+                                    style={{padding: '8px'}}
+                                >
+                                    <Image 
+                                        src="/test.png"
+                                        width={32}
+                                        height={32}
+                                        alt="profile picture"
+                                    />
+                                </div>
+                                <div className="username"
+                                    style={{marginLeft: '0.5rem'}}
+                                >
+                                    <span>chojoshua99</span>
+                                </div>
+                            </header>
+                            <div className="settings d-flex justify-content-center align-items-center">
+                                <button className="settings-icon d-inline-flex justify-content-center align-items-center"
+                                    style={{padding: 4}}
+                                >
+                                    <AiOutlineEllipsis />
+                                </button>
+                            </div>
+                        </div> */}
                         <div className="post-image
                                         d-flex
                                         align-items-center
@@ -289,6 +315,9 @@ export default function SinglePost(): JSX.Element {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="SinglePost-More">
+                    
                 </div>
             </div>
         </>
